@@ -1,0 +1,10 @@
+.linkChannels {
+	display: none;
+}
+.iconVisibility-sTNpHs:hover .linkChannels {
+	display: block;
+	cursor: pointer;
+}
+.linkChannels {
+	z-index: 999;
+}
