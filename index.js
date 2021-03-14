@@ -10,23 +10,16 @@ module.exports = class LinkChannels extends Plugin {
 		const ChannelItem = getModule(m => m.default && m.default.displayName == 'ChannelItem', false);
 		inject('linkbutton', ChannelItem, 'default', (_, props) => {
 			const children = props.props.children.props.children[1].props.children[1].props.children;
+			const channel = children[1].props.channel;
+			if (channel.type === 2) return props;
 			children.unshift(
 				React.createElement(LinkIcon, {
 					onClick: () => {
-						clipboard.writeText(
-							'<#' +
-								props.props.children.props.children[1].props.children[0].props.children[0].props
-									.channel.id +
-								'>'
-						);
+						clipboard.writeText(`<#${channel.id}>`);
 						powercord.api.notices.sendToast('linkchannel', {
 							header: 'Copied Success',
 							timeout: 5000,
-							content:
-								'Copied channel id for #' +
-								props.props.children.props.children[1].props.children[0].props.children[0].props
-									.channel.name +
-								'!',
+							content: `Copied channel id for #${channel.name}!`,
 						});
 					},
 				})
