@@ -36,7 +36,6 @@ module.exports = class LinkChannels extends Plugin {
 class LinkIcon extends React.Component {
 	render() {
 		const classes = getModule(['iconItem'], false);
-		const joinClass = (...classNames) => classNames.filter(Boolean).join(' ');
 		return React.createElement(
 			Tooltip,
 			{
@@ -48,7 +47,7 @@ class LinkIcon extends React.Component {
 			React.createElement(
 				'div',
 				{
-					className: joinClass('linkChannels'),
+					className: 'linkChannels',
 				},
 				React.createElement('svg', {
 					className: classes.actionIcon,
