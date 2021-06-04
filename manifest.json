@@ -1,7 +1,7 @@
 {
-	"name": "Link channel",
-	"version": "1.0.0",
-	"description": "lol.",
+	"name": "Link channels",
+	"version": "1.0.1",
+	"description": "Mentions channels more easily.",
 	"author": "ugly-patootie#0611",
 	"license": "MIT"
 }
