@@ -39,7 +39,7 @@ class LinkIcon extends React.Component {
 			Tooltip,
 			{
 				className: classes.iconItem,
-				text: 'Channel Id',
+				text: 'Copy Channel',
 				position: 'top',
 				color: 'black',
 			},
